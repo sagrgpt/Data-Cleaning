@@ -1,0 +1,38 @@
+Task:
+For data-analytics we need a lot of data to be gathered first. Data comes in raw formats(PDF, Excel, JPG) in which we need to extract only the useful content for our analysis. Manual effort to extract this valuable resource is cumbersome and therefore we need to automate this process. Many open-source tools are availabe for this purpose today, and with efficient algorithms we can automate these everyday processes with ease.
+
+We have provided a rate sheet whose data needs to be extracted and saved in a specific format.
+
+Input Files
+1. lookup.csv - File contains the ports information.
+2. Rate sheet - Excel file which needs to be processed.
+	Sheet 1 - The the rate sheet which needs to be processed.
+	Sheet 2 - The Sheet which has the format of the Missing Ports.
+	Sheet 3 - The sheet which has the format of Valid Ports (first few results have been entered for you)
+
+
+Terms:
+POD - Port Of Destination
+POL - Port of Loading
+POD CODE - Port Of Destination(POD) Code.
+TT - Transit Time
+Remarks - additional information regarding the deliveries.
+Trade - Trading Info
+
+
+Output Structure - We have given a sheet which has the result column names. Extracted data should be added under their respective column names in the result file.
+
+Guidelines:
+1. Check if POD CODE AND POL exist in the lookup file, make a new entry in the result sheet only if both are existing in lookup.
+2. The result should have only POD code and POL code and not their names.
+4. If any of the two is not found in the lookup, add it individually to a separate sheet.
+
+Result Expectaions:
+1. Treat POL individually (split ports if multiple ports present in one cell).
+2. Change Date format to mm-dd-yyyy
+3. Clean format - should have only utf-8 encoding in the result.
+4. Combine the remarks and special remarks into one columns named All Remarks in the result sheet.
+
+The result should be in two separate files. Both should be in xlsx format.
+1. Missing Port File
+2. Result file
